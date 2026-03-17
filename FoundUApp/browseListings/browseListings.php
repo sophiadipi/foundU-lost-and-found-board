@@ -1,8 +1,4 @@
 <!--****************************************************************************
- * COMP 3541 Final Project
- * Sophia DiPietro (T00714296)
- * March 17, 2026
- * 
  * FoundU - Browse Listings
  * 
  * browseListings.php
