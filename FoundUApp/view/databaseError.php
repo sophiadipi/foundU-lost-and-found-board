@@ -1,8 +1,4 @@
 <!--****************************************************************************
- * COMP 3541 Final Project
- * Sophia DiPietro (T00714296)
- * March 10, 2026
- * 
  * FoundU - Errors
  * 
  * databaseError.php
