@@ -1,9 +1,5 @@
 <?php
 /*******************************************************************************
- * COMP 3541 Final Project
- * Sophia DiPietro (T00714296)
- * March 10, 2026
- * 
  * FoundU - Model
  * 
  * Database.php
@@ -20,7 +16,7 @@
 class Database {
     private static $dsn = 'mysql:host=localhost;dbname=foundu';
     private static $username = 'root';
-    private static $password = 'Ketchup13141516';
+    private static $password = 'password_redacted';
     private static $db;
     
     private function __construct() {}
