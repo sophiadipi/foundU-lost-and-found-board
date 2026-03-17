@@ -1,9 +1,5 @@
 <?php
 /*******************************************************************************
- * COMP 3541 Final Project
- * Sophia DiPietro (T00714296)
- * March 14, 2026
- * 
  * FoundUApp - Browse Listings
  * 
  * index.php
