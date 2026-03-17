@@ -1,0 +1,582 @@
+@charset "utf-8";
+/*******************************************************************************
+ * COMP 3541 Final Project
+ * Sophia DiPietro (T00714296)
+ * March 14, 2026
+ * 
+ * Found U
+ * 
+ * main.css
+ * 
+ * 
+ * 
+ ******************************************************************************/
+
+@font-face {
+    font-family: 'Libre Baskerville'; src: url('fonts/libre-baskerville.regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Libre Baskerville Bold'; src: url('fonts/libre-baskerville.bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Montserrat'; src: url('fonts/montserrat.regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Bold'; src: url('fonts/montserrat.bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Extra Bold'; src: url('fonts/montserrat.extrabold.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-width: 320px;
+    overflow-y: scroll;
+}
+
+body {
+    background: #ebe9e6;
+}
+
+header {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    box-sizing: border-box;
+    background: #ebe9e6;
+    top: 0;
+    position: sticky;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(1, 20, 75, 0.6);
+    z-index: 10;
+}
+
+.logo img {
+    width: 260px;
+    height: auto;
+}
+
+nav {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#navIcon {
+    display: none;
+}
+
+#navMenu > li {
+    display: inline;
+    margin: 0 3.5vw;
+}
+
+nav ul {
+    list-style: none;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    margin: 4vw;
+    font-size: 20px;
+}
+
+#navMenu a {
+    color: rgb(1, 20, 75);
+    text-decoration: none;
+}
+
+#navMenu a:hover {
+    color: rgb(248, 89, 0);
+}
+
+#navMenu a:active {
+    color: rgb(248, 89, 0);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #ebe9e6;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(1, 20, 25, 0.3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 100;  
+}
+
+.dropdownMenu li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdownMenu a {
+    display: block;
+    padding: 18px 18px;
+    text-decoration: none;
+    color: rgb(1, 20, 75);
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.dropdownMenu a:hover {
+    color: rgb(248, 89, 0);
+    background-color: rgba(248, 89, 0, 0.1);
+}
+
+.dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+.heroImage {
+    background-image: url("images/heroBlue2.png");
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 6px 16px rgba(1, 20, 25, 0.3);
+    
+}
+
+.heroText {
+    text-align: center;
+    color: #f6f6f6;
+    font-size: 3vh;
+    font-family: 'Libre Baskerville Bold', Georgia, serif;
+    z-index: 2;
+    padding: 30px;
+}
+
+.heroText h1 {
+    padding: 5px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.heroText p {
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.5vh;
+    padding: 15px 0 30px 0;
+    margin: 0 5px;
+    color: #f6f6f6;
+}
+
+#browseButton {
+    background-color: rgb(1, 20, 75);
+    border-radius: 10px;
+    color: #f6f6f6;
+    font-size: 18px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: 2px solid rgb(248, 89, 0);
+}
+
+#browseButton:hover {
+    background: rgba(248, 89, 0, 0.7);
+}
+
+.cards {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    gap: 50px;
+    background-color: #ebe9e6;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: rgb(1, 20, 75);
+}
+
+.howItWorks {
+    padding: 150px 180px;
+}
+
+.howItWorks h1 {
+    font-family: 'Libre Baskerville Bold', Georgia, serif;
+    font-weight: bolder;
+    color: rgb(1, 20, 75);
+    font-size: 2.8em;
+}
+
+.howItWorks i {
+    color: rgb(248, 89, 0);
+    font-size: 1.45em;
+}
+
+.card h2 {
+    font-size: 1.3em;
+    font-family: 'Montserrat Bold';
+    padding: 5px;
+}
+
+.card {
+    -webkit-flex: 1 1 400px;
+    flex: 1 1 400px;
+    display: -webkit-flex;
+    display: flex;
+    max-width: 600px;
+    -webkit-flex-direction: column;
+    -flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgb(1, 20, 75);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(1, 20, 25, 0.3);
+    text-align: center;
+    color: #f6f6f6;
+}
+
+.card p {
+    margin: 20px 40px 40px 40px;
+}
+
+.card h1 {
+    font-size: 1.8em;
+    padding: 40px 0 10px 0;
+}
+
+.card i {
+    font-size: 1.3em
+}
+
+/* LOGIN/REGISTRATION PAGE STYLES */
+.authPage {
+    background-image: url("/FoundUApp/images/uniBackground.png");
+}
+
+.authDiv {
+    margin: 20px;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    padding: 0 10px;
+    color: rgb(1, 20, 75);
+}
+
+.intro h1 {
+    font-family: 'Libre Baskerville Bold', Georgia, serif;
+    padding: 50px 0 15px 0;
+    font-size: 2.5em;
+}
+
+.intro p {
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 1.35em;
+}
+
+.authForm {
+    max-width: 700px;
+    width: 100%;
+    margin: 50px auto;
+    background: rgb(1, 20, 75);
+    padding: 60px 100px;
+    color: #ebe9e6;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 1.2em;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.authForm i {
+    color: rgb(248, 89, 0);
+    font-size: 1.35em;
+}
+
+.authForm a {
+    color: #ebe9e6;
+}
+
+.authForm a:hover {
+    color: rgb(248, 89, 0);
+}
+
+#passRules {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 0.8em;
+    margin-top: 8px;
+}
+
+.authForm form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+}
+
+.authForm label, .authForm p, .authForm span {
+    width: 100%;
+}
+
+.authForm input, .authForm select {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid rgb(92, 117, 187);
+    font-size: 1.1rem;
+    margin-top: 8px;
+    font-family: Montserrat, Arial, sans-serif;
+    color: rgb(1, 20, 75);
+}
+
+.authForm input:focus, authForm select:focus {
+    outline: none;
+}
+
+.labelRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.labelRow label {
+    margin: 0;
+}
+
+.error {
+    color: rgb(248, 89, 0);
+    font-size: 0.85em;
+    text-align: right;
+}
+
+input[type="submit"] {
+    width: 200px;
+    margin: 30px auto 5px auto;
+    border: 2px solid rgb(248, 89, 0);
+    background-color: rgba(248, 89, 0, 0.7);
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    color: #ebe9e6;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(248, 89, 0);
+    cursor: pointer;
+}
+
+.bottom {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* BROWSE LISTINGS PAGE STYLES */
+.searchAndFilterDiv {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.searchForm {
+    width: 100%;
+    max-width: 375px;
+    margin: 40px auto 20px auto;
+}
+
+.searchForm form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.searchForm input[type="text"] {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid rgb(204, 210, 220);
+    border-radius: 20px;
+    font-family: Montserrat, Arial, sans-serif;
+    color: rgb(1, 20, 75);
+}
+
+.searchForm input[type="text"]:focus {
+    outline: none;
+    padding: 0.6rem 0.8rem;
+}
+
+.searchAndFilterDiv input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    max-width: 140px;
+    margin: 0 auto 0 20px;
+    border: 2px solid rgb(248, 89, 0);
+    background-color: rgb(1, 20, 75);
+}
+
+.searchAndFilterDiv input[type="submit"]:hover {
+    background-color: rgba(248, 89, 0, 0.7);
+}
+
+.searchAndFilterDiv i {
+    color: rgb(1, 20, 75);
+    font-size: 1.8rem;
+}
+
+.filtersDiv select {
+    margin: 25px 50px 30px 10px !important;
+}
+
+.filtersDiv select[name="universityID"] {
+    margin: 25px 30px 30px 10px !important;
+}
+
+.filtersDiv input[type="submit"] {
+    margin-left: 0;
+}
+
+.filtersDiv i {
+    display: none !important;
+}
+
+.filtersDiv select {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(204, 210, 220);
+    font-size: 0.9rem;
+    margin: 30px auto;
+    font-family: Montserrat, Arial, sans-serif;
+    color: rgb(1, 20, 75);
+}
+
+.filtersDiv label {
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(1, 20, 75);
+}
+
+.listings {
+    width: 90%;
+    max-width: 1400px;
+    margin: 2rem auto;
+}
+
+.listingsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.listingCard {
+    background-color: #d6d2cc;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.listingCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.listingTitle {
+    font-size: 0.7rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    height: 4.2rem;
+    color: rgb(1, 20, 75);
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+}
+
+.listingUniversity {
+    font-size: 1rem;
+    color: #666;
+    font-family: Montserrat, Arial, sans-serif;
+    margin: 0.5rem 0;
+}
+
+.listingImage{
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: #ebe9e6;
+    border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.listingImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.listingInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+}
+
+.listingType, .datePosted {
+    margin: 0.35rem 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.listingType {
+    font-weight: bold;
+    color: #666;
+}
+
+.datePosted {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+#noListingsFound {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(1, 20, 75);
+    text-align: center;
+}
+
+.listingsGrid a {
+    text-decoration: none;
+}
+
+
